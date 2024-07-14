@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:focus {
+	outline: none;
+  }
+
+.new-task_form{
+	min-width: 650px;
+	min-height: 65px;
+	border:2px solid rgb(249 115 22);
+	background-color: rgb(15 23 42);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.75rem;
+	margin-bottom: 3.5rem; 
+	transition: 250ms;
+}
+.new-task_form:focus-within {
+
+	border-color: rgb(250 204 21);
+}
+body{
+	background-color: rgb(107, 107, 107);
+	color: white;
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}

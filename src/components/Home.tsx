@@ -5,9 +5,12 @@ import { taskBase } from "../taskBase";
 import { Task, HomeState } from "../type";
 
 const Home = () => {
-  const [state, setState] = useState<HomeState>({ tasks: [], textTask: "" });
+  const [state, setState] = useState<HomeState>({
+    tasks: [...taskBase],
+    textTask: "",
+  });
 
-  const handleConfirm = (id: string | number) => {
+  const handleConfirm = (id: string) => {
     const updatedTasks = state.tasks.map((task) => {
       if (task.id === id) {
         return { ...task, confirm: !task.confirm };
@@ -35,7 +38,7 @@ const Home = () => {
           text: state.textTask,
           confirm: false,
         };
-        const updatedTasks = [...state.tasks, newTask];
+        const updatedTasks = [newTask, ...state.tasks];
         setState({ ...state, tasks: updatedTasks, textTask: "" });
       }
     }

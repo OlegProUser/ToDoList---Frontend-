@@ -1,1 +1,1 @@
-After clone, you need to write in console two commands: npm install and npm run dev ; or yarn , yarn dev
+After clone, you need to write in console two commands: ( npm install && npm run dev ) || ( yarn && yarn dev )
